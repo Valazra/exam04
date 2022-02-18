@@ -2,12 +2,6 @@
 #include <sys/wait.h>
 #include <string.h>
 
-#ifdef TEST_SH
-# define TEST	1
-#else
-# define TEST	0
-#endif
-
 void	ft_putstr_fd2(char *str)
 {
 	int	i;
@@ -97,7 +91,5 @@ int	main(int ac, char **av, char **env)
 		}
 	}
 	close(tmp_fd);
-	if (TEST)
-		while (1);
 	return (0);
 }
